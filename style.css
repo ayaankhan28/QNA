@@ -1,0 +1,30 @@
+body{
+    background-color: #ebf5ff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.start,.QNA{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    height: 100vh;
+}
+.start button{
+    text-decoration: none;
+    color: #57a6eb;
+    background-color: #ffffff;
+    font-size: 20px;
+    padding: 10px 20px;
+    border: 1px solid #57a6eb;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+.start h1{
+    color: #57a6eb;
+}
+.QNA #question{
+    color: black;
+    margin-bottom: 20px;
+}
