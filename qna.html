@@ -2,24 +2,46 @@
 <html>
 <head>
     <title>QNA page</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="style2.css">
 </head>
 <body>
     <div class="QNA">
-        <h1 id="question">QNA</h1>
-        <div class="options">
-            <button id="option1">Option 1</button>
-            <button id="option2">Option 2</button>
-            <button id="option3">Option 3</button>
-            <button id="option4">Option 4</button>
-
+        <div class="stats">
+            <div class="score">
+                <h1>Quest</h1>
+                <h1 id="num1">1/3</h1>
+            </div>
+            <div class="points">
+                <h1 >Score</h1>
+                <h1 id="num2">0</h1>
+            </div>
         </div>
-        
-
-    </div>
+        <div class="question">
+            <h1 id="ask">Which HTML tag is used to define an inline style?</h1>
+            <div class="options">
+                <button  class="custom-button">
+                    <span class="button-icon">A</span>
+                    <p  id="opt1" class="button-text">&lt;script&gt;</p>
+                </button>
+                <button  class="custom-button">
+                    <span class="button-icon">B</span>
+                    <p  id="opt2" class="button-text">&lt;css&gt;</p>
+                </button>
+                <button  class="custom-button">
+                    <span class="button-icon">C</span>
+                    <p id="opt3" class="button-text">&lt;style&gt;</p>
+                </button>
+                <button  class="custom-button">
+                    <span class="button-icon">D</span>
+                    <p id="opt4" class="button-text">&lt;span&gt;</p>
+                </button>
+                
+            </div>
+        </div>
+       
+    </div> 
     
-    
-    <script src="main.js"></script>
+    <script src="main2.js"></script>
 
 </body>
 </html>
