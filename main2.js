@@ -81,6 +81,7 @@ let questions = [
     }
     
 ]
+
 document.getElementById('num1').innerHTML ="1/"+questions.length;
 let qulist = new Set();
 async function sleep(ms) {
@@ -88,6 +89,7 @@ async function sleep(ms) {
   }
 async function updateQuestion(){
     await sleep(1000);
+    
     let element = document.getElementsByClassName('custom-button')[0];
     element.style.backgroundColor = "white";
     element = document.getElementsByClassName('custom-button')[1];
@@ -96,12 +98,19 @@ async function updateQuestion(){
     element.style.backgroundColor = "white";
     element = document.getElementsByClassName('custom-button')[3];
     element.style.backgroundColor = "white";
+    
 
     currentQuestion = currentQuestion + 1;
     if(currentQuestion === questions.length){
        
         console.log('Quiz Over'+score);
         document.getElementById('num2').innerHTML = score;
+        alert("Quiz Over! Your score is "+score);
+        const element = document.getElementsByClassName("QNA");
+        
+
+// Empty the content of the element
+        element.innerHTML = ""; // Navigate to newpage.html
         return;
        
     }
@@ -118,6 +127,8 @@ async function updateQuestion(){
     document.getElementById('opt2').innerHTML = quest.choice2;
     document.getElementById('opt3').innerHTML = quest.choice3;
     document.getElementById('opt4').innerHTML = quest.choice4;
+    document.getElementsByClassName('progress')[0].style.width = ((currentQuestion+1)/questions.length)*100 + "%";
+    //element.style.width = ((currentQuestion+1)/questions.length)*100 + "%";
 
 }
 let currentQuestion = 0;
@@ -128,7 +139,7 @@ document.getElementsByClassName('custom-button')[0].onclick = function() {
     console.log('Button clicked A');
     if (questions[currentQuestion].answer === 1) {
         console.log('Correct');
-        this.style.backgroundColor = 'green';
+        this.style.backgroundColor = '#00e11a';
         score = score+1;
     } else {
         this.style.backgroundColor = 'red';
@@ -143,7 +154,7 @@ document.getElementsByClassName('custom-button')[1].onclick = function() {
     if (questions[currentQuestion].answer === 2) {
         console.log('Correct');
         score = score+1;
-        this.style.backgroundColor = 'green';
+        this.style.backgroundColor = '#00e11a';
     } else {
         this.style.backgroundColor = 'red';
         console.log('Incorrect');
@@ -155,7 +166,7 @@ document.getElementsByClassName('custom-button')[2].onclick = function() {
     if (questions[currentQuestion].answer === 3) {
         console.log('Correct');
         score = score+1;
-        this.style.backgroundColor = 'green';
+        this.style.backgroundColor = '#00e11a';
     } else {
         this.style.backgroundColor = 'red';
         console.log('Incorrect');
@@ -167,7 +178,7 @@ document.getElementsByClassName('custom-button')[3].onclick = function() {
     if (questions[currentQuestion].answer === 4) {
         console.log('Correct');
         score = score+1;
-        this.style.backgroundColor = 'green';
+        this.style.backgroundColor = '#00e11a';
     } else {
         this.style.backgroundColor = 'red';
         console.log('Incorrect');

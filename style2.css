@@ -65,3 +65,14 @@ body{
     margin: 0; /* Remove default margin */
     margin-right: 10px;
 }
+.progressbox{
+   
+    width: 95%;
+    height: 20px;
+    border: 1px solid #1f96ff;
+}
+.progress{
+    width: 0%;
+    height: 100%;
+    background-color: #1f96ff;
+}
