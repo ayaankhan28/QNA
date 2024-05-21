@@ -82,6 +82,18 @@ let questions = [
     
 ]
 
+function shuffle(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+}
+questions = shuffle(questions);
+
+
+
+
 document.getElementById('num1').innerHTML ="1/"+questions.length;
 let qulist = new Set();
 async function sleep(ms) {
@@ -106,11 +118,9 @@ async function updateQuestion(){
         console.log('Quiz Over'+score);
         document.getElementById('num2').innerHTML = score;
         alert("Quiz Over! Your score is "+score);
-        const element = document.getElementsByClassName("QNA");
-        
-
-// Empty the content of the element
-        element.innerHTML = ""; // Navigate to newpage.html
+        await sleep(2000);
+        window.location.href = 'index.html';
+        element.innerHTML = ""; 
         return;
        
     }

@@ -7,8 +7,8 @@ body{
 .QNA {
     width: 700px;
     height: 500px;
-    background-color: #dff0ff; /* Optional background color */
-    margin: 100px auto; /* Centers the element horizontally */
+    background-color: #dff0ff; 
+    margin: 100px auto;
 
   }
 .stats{
@@ -31,7 +31,7 @@ body{
     width: 95%;
     display: flex;
     align-items: center;
-    background-color: #f0f8ff; /* Light blue background */
+    background-color: #f0f8ff; 
     border: none;
     border-radius: 5px;
     padding: 0px;
@@ -42,14 +42,14 @@ body{
     transition: transform 0.3s, box-shadow 0.3s;
 }
 .custom-button:hover{
-    border: 1px solid #002c52; /* Dark blue border */
-    transform: translateY(-3px); /* Move button up slightly on hover */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); /* Add shadow on hover */
+    border: 1px solid #002c52; 
+    transform: translateY(-3px); 
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); 
 
 }
 
 .button-icon {
-    background-color: #4285f4; /* Google blue */
+    background-color: #4285f4; 
     color: white;
     font-weight: bold;
     display: inline-block;
@@ -62,7 +62,7 @@ body{
 }
 
 .button-text {
-    margin: 0; /* Remove default margin */
+    margin: 0; 
     margin-right: 10px;
 }
 .progressbox{
